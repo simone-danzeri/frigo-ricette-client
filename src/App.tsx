@@ -1,4 +1,7 @@
 import { Routes, Route, Link } from "react-router-dom"
+import IngredientsPage from "./pages/IngredientsPage"
+import RecipesPage from "./pages/RecipesPage"
+import GroceriesPage from "./pages/GroceriesPage"
 function App() {
   return (
     <div>
@@ -11,9 +14,9 @@ function App() {
         <Link to="/groceries">Lista della spesa</Link>
       </nav>
       <Routes>
-        <Route path="/" element={<div>Pagina Ingredienti</div>}/>
-        <Route path="/recipes" element={<div>Pagina Ricette</div>}/>
-        <Route path="/groceries" element={<div>Lista della spesa</div>}/>
+        <Route path="/" element={<IngredientsPage />}/>
+        <Route path="/recipes" element={<RecipesPage />}/>
+        <Route path="/groceries" element={<GroceriesPage />}/>
       </Routes>
     </div>
   )
