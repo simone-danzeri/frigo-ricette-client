@@ -4,7 +4,7 @@ import type { Ingredient } from "../types";
 export const getIngredients = () =>
     api.get<Ingredient[]>("/ingredients").then(res => res.data);
 
-export const createIngredient = (data: {name: string; quantity: string; isAvailable: boolean}) =>
+export const createIngredient = (data: {name: string; quantity: number; isAvailable: boolean}) =>
     api.post<Ingredient>("/ingredients", data).then(res => res.data);
 
 export const updateIngredient = (id: number, data: {name: string; quantity: number; isAvailable: boolean}) =>
